@@ -1,0 +1,84 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  display: flex;
+  height: 100vh;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+p {
+  color: #a4a8ac;
+}
+
+img {
+  height: 64px;
+  width: 64px;
+  border-radius: 100%;
+}
+
+.sidebar {
+  flex: 1;
+  background: #111;
+  padding: 2rem 2rem 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.3s ease-in-out;
+
+  & a {
+    color: #eee;
+    font-weight: 500;
+  }
+
+  & .side__nav {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    & .item {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      padding: 8px;
+      border-radius: 8px;
+      cursor: pointer;
+
+      & a {
+        color: #a4a8ac;
+        transition: all 0.3s ease-in-out;
+      }
+
+      & i {
+        font-size: 20px;
+        color: #a4a8ac;
+        transition: all 0.3s ease-in-out;
+      }
+    }
+
+    & .active {
+      background-color: #fafafa;
+
+      & a,
+      i {
+        color: #111;
+      }
+    }
+  }
+}
+
+.container {
+  flex: 8;
+}
