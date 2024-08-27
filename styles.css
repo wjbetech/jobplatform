@@ -23,12 +23,6 @@ p {
   color: #a4a8ac;
 }
 
-img {
-  height: 64px;
-  width: 64px;
-  border-radius: 100%;
-}
-
 .sidebar {
   flex: 1;
   background: #111;
@@ -76,6 +70,25 @@ img {
         color: #111;
       }
     }
+  }
+
+  & .sidenav__profile {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  & .profile__view {
+    margin-top: 12px;
+  }
+
+  & img {
+    height: 64px;
+    width: 64px;
+    border-radius: 100%;
+    margin-bottom: 4px;
   }
 }
 
