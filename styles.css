@@ -294,9 +294,12 @@ p {
   }
 
   & .main {
+    display: flex;
     margin: 20px 0;
 
     & .content {
+      flex: 9;
+
       & .header {
         padding: 20px 0;
         margin-bottom: 16px;
@@ -315,12 +318,17 @@ p {
 
     & .job__cards {
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      gap: 16px;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
 
       & .card {
         padding: 10px 20px 20px 20px;
         box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+      }
+
+      & .card:hover {
+        transition: all 0.3s ease-in-out;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
       }
 
       & .job__info {
@@ -333,6 +341,11 @@ p {
           display: flex;
           flex-direction: column;
           gap: 8px;
+          line-height: 24px;
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 4;
+          overflow: hidden;
 
           & {
             h5 {
