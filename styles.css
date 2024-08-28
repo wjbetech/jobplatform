@@ -1,7 +1,9 @@
 :root {
   --light-grey: #eee;
   --grey: #999;
-  --black: #111;
+  --dark-grey: #555;
+  --black-border: #111;
+  --black-text: #111;
   --accent: #008cff;
 }
 
@@ -24,7 +26,7 @@ body {
 
 a {
   text-decoration: none;
-  color: #111;
+  color: var(--black-text);
 }
 
 p {
@@ -33,7 +35,7 @@ p {
 
 .sidebar {
   flex: 1;
-  background: #111;
+  background: var(--dark-grey);
   padding: 1.5rem 2.5rem 1.5rem 1.5rem;
   display: flex;
   flex-direction: column;
@@ -75,7 +77,7 @@ p {
 
       & a,
       i {
-        color: var(--black);
+        color: var(--black-text);
         font-weight: bold;
       }
     }
@@ -93,6 +95,10 @@ p {
     border-radius: 24px;
   }
 
+  & .skills__tags {
+    margin: 8px;
+  }
+
   & .profile__view {
     margin-top: 12px;
     width: 160px;
@@ -100,9 +106,9 @@ p {
     .profile__view__button {
       cursor: pointer;
       padding: 8px 12px;
-      border: 2px solid transparent;
+      border: 2px solid rgba(0, 0, 0, 0);
       border-radius: 24px;
-      color: var(--black);
+      color: var(--dark-grey);
       z-index: 1;
       background: var(--light-grey);
       position: relative;
@@ -122,14 +128,13 @@ p {
       height: 100%;
       width: 0;
       border-radius: 24px;
-      background-color: var(--black);
+      background-color: var(--dark-grey);
       z-index: -1;
       transition: all 250ms;
     }
 
     .profile__view__button:hover {
       color: var(--light-grey);
-      border: 2px solid var(--light-grey);
     }
 
     .profile__view__button:hover::before {
@@ -161,11 +166,15 @@ p {
     gap: 1.5rem;
 
     & .search__button {
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      gap: 4px;
       cursor: pointer;
       padding: 8px 12px;
       border: 2px solid var(--grey);
       border-radius: 24px;
-      color: var(--black);
+      color: var(--black-text);
       z-index: 1;
       background: var(--light-grey);
       position: relative;
@@ -174,7 +183,12 @@ p {
       font-family: 'Inter', sans-serif;
       transition: all 250ms;
       overflow: hidden;
-      width: 200px;
+      width: 236px;
+    }
+
+    & .bx-search {
+      font-size: 20px;
+      font-weight: bold;
     }
 
     & .search__button::before {
@@ -185,14 +199,14 @@ p {
       height: 100%;
       width: 0;
       border-radius: 24px;
-      background-color: var(--black);
+      background-color: var(--dark-grey);
       z-index: -1;
       transition: all 250ms;
     }
 
     & .search__button:hover {
       color: var(--light-grey);
-      border: 2px solid var(--light-grey);
+      border: 2px solid white;
     }
 
     & .search__button:hover::before {
@@ -201,9 +215,10 @@ p {
 
     & #menuToggle {
       cursor: pointer;
-      border: none;
+      border: 2px solid transparent;
       display: flex;
       align-items: center;
+      padding: 8px 12px;
 
       & .bx-menu-alt-left {
         font-size: 24px;
@@ -213,6 +228,11 @@ p {
         font-size: 20px;
       }
     }
+
+    & #menuToggle:hover {
+      border: 2px solid var(--grey);
+      border-radius: 24px;
+    }
   }
 
   & .nav .search__all,
@@ -220,7 +240,7 @@ p {
     display: flex;
     align-items: center;
     border-radius: 24px;
-    color: var(--black);
+    color: var(--black-text);
     width: 100%;
 
     & i {
