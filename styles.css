@@ -1,7 +1,7 @@
 :root {
   --light-grey: #eee;
   --grey: #999;
-  --dark-grey: #555;
+  --dark-grey: #333;
   --black-border: #111;
   --black-text: #111;
   --accent: #008cff;
@@ -36,7 +36,7 @@ p {
 .sidebar {
   flex: 1;
   background: var(--dark-grey);
-  padding: 1.5rem 2.5rem 1.5rem 1.5rem;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -90,8 +90,6 @@ p {
     align-items: center;
     text-align: center;
     font-size: 12px;
-    border: 2px solid var(--grey);
-    padding: 1.25rem;
     border-radius: 24px;
   }
 
@@ -157,7 +155,8 @@ p {
 
 .container {
   flex: 8;
-  padding: 1.5rem 2.5rem 1.5rem 1.5rem;
+  padding: 20px;
+  width: 100%;
 
   & .nav {
     display: flex;
@@ -214,9 +213,9 @@ p {
     }
 
     & #menuToggle {
+      display: none;
       cursor: pointer;
       border: 2px solid transparent;
-      display: flex;
       align-items: center;
       padding: 8px 12px;
 
@@ -261,6 +260,122 @@ p {
 
   & .user__info {
     justify-content: start;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    & img {
+      width: 42px;
+      height: 42px;
+      border-radius: 24px;
+      cursor: pointer;
+      object-fit: cover;
+    }
+
+    & a {
+      font-weight: bold;
+    }
+
+    & p {
+      font-size: 14px;
+    }
+  }
+
+  & .bx-bell {
+    font-size: 20px;
+    padding: 8px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    border-radius: 24px;
+  }
+
+  & .bx-bell:hover {
+    border: 2px solid var(--grey);
+  }
+
+  & .main {
+    margin: 20px 0;
+
+    & .content {
+      & .header {
+        padding: 20px 0;
+        margin-bottom: 16px;
+
+        & p {
+          color: var(--dark-grey);
+          font-size: 14px;
+        }
+
+        & span {
+          font-size: 14px;
+          color: var(--grey);
+        }
+      }
+    }
+
+    & .job__cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 16px;
+
+      & .card {
+        padding: 10px 20px 20px 20px;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+      }
+
+      & .job__info {
+        & .bxl-go-lang {
+          font-size: 48px;
+          color: #00add8;
+        }
+
+        & .job__description {
+          display: flex;
+          flex-direction: column;
+          gap: 8px;
+
+          & {
+            h5 {
+              font-size: ;
+            }
+
+            .job__location {
+              color: var(--dark-grey);
+              font-size: 14px;
+            }
+
+            span {
+              color: var(--grey);
+            }
+
+            p {
+              color: var(--dark-grey);
+            }
+          }
+        }
+      }
+      & .job__buttons {
+        margin-top: 16px;
+        display: flex;
+        align-items: center;
+        gap: 16px;
+
+        & button {
+          padding: 4px 8px;
+          border: 2px solid var(--grey);
+          border-radius: 24px;
+          width: 84px;
+        }
+
+        & i {
+          font-size: 20px;
+          padding: 8px;
+          cursor: pointer;
+          border: 2px solid transparent;
+          border-radius: 24px;
+        }
+      }
+    }
   }
 }
 
