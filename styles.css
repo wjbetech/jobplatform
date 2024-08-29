@@ -17,8 +17,8 @@
 }
 
 body {
-  font-family: 'Inter', sans-serif;
-  font-size: 16px;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
   display: flex;
   height: 100vh;
   background-color: var(--light-grey);
@@ -31,6 +31,10 @@ a {
 
 p {
   color: var(--grey);
+}
+
+input {
+  font-family: "Inter", sans-serif;
 }
 
 .sidebar {
@@ -112,14 +116,14 @@ p {
       position: relative;
       font-size: 14px;
       font-weight: bold;
-      font-family: 'Inter', sans-serif;
+      font-family: "Inter", sans-serif;
       transition: all 250ms;
       overflow: hidden;
       width: 100%;
     }
 
     .profile__view__button::before {
-      content: '';
+      content: "";
       position: absolute;
       top: 0;
       left: 0;
@@ -179,7 +183,7 @@ p {
       position: relative;
       font-size: 14px;
       font-weight: bold;
-      font-family: 'Inter', sans-serif;
+      font-family: "Inter", sans-serif;
       transition: all 250ms;
       overflow: hidden;
       width: 236px;
@@ -191,7 +195,7 @@ p {
     }
 
     & .search__button::before {
-      content: '';
+      content: "";
       position: absolute;
       top: 0;
       left: 0;
@@ -389,9 +393,15 @@ p {
         }
       }
     }
-  }
-}
+    .filters {
+      flex: 2;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
 
-input {
-  font-family: 'Inter', sans-serif;
+      & .filter__item {
+        display: ;
+      }
+    }
+  }
 }
