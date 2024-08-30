@@ -1,10 +1,19 @@
 :root {
-  --light-grey: #eee;
-  --grey: #999;
-  --dark-grey: #333;
-  --black-border: #111;
-  --black-text: #111;
-  --accent: #008cff;
+  /* dark theme properties */
+  --darktheme-light-grey: #eee;
+  --darktheme-grey: #999;
+  --darktheme-dark-grey: #333;
+  --darktheme-black-border: #111;
+  --darktheme-black-text: #111;
+  --darktheme-accent: #008cff;
+
+  /* light theme properties */
+  --lighttheme-light-grey: #eee;
+  --lighttheme-grey: #ccc;
+  --lighttheme-dark-grey: #999;
+  --lighttheme-black-border: #999;
+  --lighttheme-black-text: #111;
+  --lighttheme-accent: #008cff;
 }
 
 *,
@@ -21,16 +30,16 @@ body {
   font-size: 14px;
   display: flex;
   height: 100vh;
-  background-color: var(--light-grey);
+  background-color: var(--darktheme-darktheme-light-grey);
 }
 
 a {
   text-decoration: none;
-  color: var(--black-text);
+  color: var(--darktheme-black-text);
 }
 
 p {
-  color: var(--grey);
+  color: var(--darktheme-grey);
 }
 
 input {
@@ -39,14 +48,14 @@ input {
 
 .sidebar {
   flex: 1;
-  background: var(--dark-grey);
+  background: var(--darktheme-dark-grey);
   padding: 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 
   & a {
-    color: var(--light-grey);
+    color: var(--darktheme-light-grey);
     font-weight: 500;
   }
 
@@ -66,22 +75,22 @@ input {
       font-weight: bold;
 
       & a {
-        color: var(--grey);
+        color: var(--darktheme-grey);
         transition: all 0.3s ease-in-out;
       }
 
       & i {
-        color: var(--grey);
+        color: var(--darktheme-grey);
         transition: all 0.3s ease-in-out;
       }
     }
 
     & .active {
-      background-color: var(--light-grey);
+      background-color: var(--darktheme-light-grey);
 
       & a,
       i {
-        color: var(--black-text);
+        color: var(--darktheme-black-text);
         font-weight: bold;
       }
     }
@@ -110,9 +119,9 @@ input {
       padding: 8px 12px;
       border: 2px solid rgba(0, 0, 0, 0);
       border-radius: 24px;
-      color: var(--dark-grey);
+      color: var(--darktheme-dark-grey);
       z-index: 1;
-      background: var(--light-grey);
+      background: var(--darktheme-light-grey);
       position: relative;
       font-size: 14px;
       font-weight: bold;
@@ -130,13 +139,13 @@ input {
       height: 100%;
       width: 0;
       border-radius: 24px;
-      background-color: var(--dark-grey);
+      background-color: var(--darktheme-dark-grey);
       z-index: -1;
       transition: all 250ms;
     }
 
     .profile__view__button:hover {
-      color: var(--light-grey);
+      color: var(--darktheme-light-grey);
     }
 
     .profile__view__button:hover::before {
@@ -175,11 +184,11 @@ input {
       gap: 4px;
       cursor: pointer;
       padding: 8px 12px;
-      border: 2px solid var(--grey);
+      border: 2px solid var(--darktheme-grey);
       border-radius: 24px;
-      color: var(--black-text);
+      color: var(--darktheme-black-text);
       z-index: 1;
-      background: var(--light-grey);
+      background: var(--darktheme-light-grey);
       position: relative;
       font-size: 14px;
       font-weight: bold;
@@ -202,13 +211,13 @@ input {
       height: 100%;
       width: 0;
       border-radius: 24px;
-      background-color: var(--dark-grey);
+      background-color: var(--darktheme-dark-grey);
       z-index: -1;
       transition: all 250ms;
     }
 
     & .search__button:hover {
-      color: var(--light-grey);
+      color: var(--darktheme-light-grey);
       border: 2px solid white;
     }
 
@@ -233,7 +242,7 @@ input {
     }
 
     & #menuToggle:hover {
-      border: 2px solid var(--grey);
+      border: 2px solid var(--darktheme-grey);
       border-radius: 24px;
     }
   }
@@ -243,14 +252,14 @@ input {
     display: flex;
     align-items: center;
     border-radius: 24px;
-    color: var(--black-text);
+    color: var(--darktheme-black-text);
     width: 100%;
 
     & i {
       padding: 8px 12px 8px 14px;
-      background-color: var(--grey);
+      background-color: var(--darktheme-grey);
       border-radius: 24px 0 0 24px;
-      color: var(--light-grey);
+      color: var(--darktheme-light-grey);
       font-size: 1.25rem;
     }
 
@@ -294,7 +303,7 @@ input {
   }
 
   & .bx-bell:hover {
-    border: 2px solid var(--grey);
+    border: 2px solid var(--darktheme-grey);
   }
 
   & .main {
@@ -309,13 +318,13 @@ input {
         margin-bottom: 16px;
 
         & p {
-          color: var(--dark-grey);
+          color: var(--darktheme-dark-grey);
           font-size: 14px;
         }
 
         & span {
           font-size: 14px;
-          color: var(--grey);
+          color: var(--darktheme-grey);
         }
       }
     }
@@ -338,7 +347,8 @@ input {
       & .job__info {
         & .bxl-go-lang {
           font-size: 48px;
-          color: #00add8;
+          color: #00add8; 
+          /* golang official color #00add8 */
         }
 
         & .job__description {
@@ -347,6 +357,7 @@ input {
           gap: 8px;
           line-height: 24px;
           display: -webkit-box;
+          line-clamp: 4;
           -webkit-box-orient: vertical;
           -webkit-line-clamp: 4;
           overflow: hidden;
@@ -357,16 +368,16 @@ input {
             }
 
             .job__location {
-              color: var(--dark-grey);
+              color: var(--darktheme-dark-grey);
               font-size: 14px;
             }
 
             span {
-              color: var(--grey);
+              color: var(--darktheme-grey);
             }
 
             p {
-              color: var(--dark-grey);
+              color: var(--darktheme-dark-grey);
             }
           }
         }
@@ -379,7 +390,7 @@ input {
 
         & button {
           padding: 4px 8px;
-          border: 2px solid var(--grey);
+          border: 2px solid var(--darktheme-grey);
           border-radius: 24px;
           width: 84px;
         }
@@ -399,9 +410,29 @@ input {
       flex-direction: column;
       gap: 20px;
 
-      & .filter__item {
-        display: ;
+      & .title {
+        font-size: 18px;
+
+        & a {
+          font-size: 16px;
+        }
       }
+
+      & .filter__item {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        text-align: right;
+      }
+
+      & .filter__checkbox {
+        font-size: 16px;
+
+        & p {
+          font-size: 14px;
+        }
+      }
+
     }
   }
 }
