@@ -406,9 +406,8 @@ input {
     }
     .filters {
       display: flex;
-      flex: 2;
+      flex: 1.5;
       flex-direction: column;
-      justify-content: space-evenly;
       gap: 20px;
       padding: 20px;
 
@@ -428,6 +427,8 @@ input {
 
       & .filter__item__header {
         margin-bottom: 8px;
+        display: flex;
+        justify-content: space-between;
       }
 
       & .filter__checkbox {
@@ -438,8 +439,11 @@ input {
         }
       }
 
+      & .filter__option {
+        padding: 0 0 4px 0;
+      }
+
       & .checkbox__span {
-        display: block;
         color: var(--darktheme-grey);
       }
     }
