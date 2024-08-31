@@ -347,7 +347,7 @@ input {
       & .job__info {
         & .bxl-go-lang {
           font-size: 48px;
-          color: #00add8; 
+          color: #00add8;
           /* golang official color #00add8 */
         }
 
@@ -405,24 +405,29 @@ input {
       }
     }
     .filters {
-      flex: 2;
       display: flex;
+      flex: 2;
       flex-direction: column;
+      justify-content: space-evenly;
       gap: 20px;
+      padding: 20px;
+
+      & a {
+        font-size: 16px;
+        font-weight: bold;
+        color: var(--darktheme-grey);
+      }
+
+      & a:hover {
+        color: #ee2f0d;
+      }
 
       & .title {
         font-size: 18px;
-
-        & a {
-          font-size: 16px;
-        }
       }
 
-      & .filter__item {
-        display: flex;
-        flex-direction: column;
-        gap: 8px;
-        text-align: right;
+      & .filter__item__header {
+        margin-bottom: 8px;
       }
 
       & .filter__checkbox {
@@ -433,6 +438,10 @@ input {
         }
       }
 
+      & .checkbox__span {
+        display: block;
+        color: var(--darktheme-grey);
+      }
     }
   }
 }

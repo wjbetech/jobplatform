@@ -198,171 +198,120 @@
           </div>
         </div>
 
-        <!-- right side filters panel -->
+        <!-- filters side nav -->
         <div class="filters">
-      
-            <div class="header">
-              <h3>Job Filter</h3>
+          
+          <div class="header">
+            <h2>Job Filter</h2>
+            <a href="#">Clear All</a>
+          </div>
+          
+          <!-- when job was posted -->
+          <div class="filter">
+            <div class="filter__item__header">
+              <h3>Time</h3>
               <a href="#">Clear</a>
             </div>
-      
-            <div class="filter__item">
-              <div class="title">
-                <h4>Posted <i class='bx bx-calendar'></i></h4>
-                <a href="#">Clear</a>
-              </div>
-              <div class="filter__checkbox">
-                <div>
-                  <input type="checkbox" name="today">
-                  <label for="today">Just Now</label>
-                </div>
-                <p>50+</p>
-              </div>
-              <div class="filter__checkbox">
-                <div>
-                  <input type="checkbox" name="week">
-                  <label for="week">This Week</label>
-                </div>
-                <p>100+</p>
-              </div>
-              <div class="filter__checkbox">
-                <div>
-                  <input type="checkbox" name="month">
-                  <label for="month">This Month</label>
-                </div>
-                <p>200+</p>
-              </div>
-              <div class="filter__checkbox">
-                <div>
-                  <input type="checkbox" name="year">
-                  <label for="year">This Year</label>
-                </div>
-                <p>400+</p>
-              </div>
+            <div class="filter__option">
+              <input type="checkbox" name="now" id="now">
+              <label for="now">Just Now</label>
+              <span class="checkbox__span">50+</span>
+            </div>
+            <div class="filter__option">
+              <input type="checkbox" name="week" id="week">
+              <label for="week">This Week</label>
+              <span class="checkbox__span">100+</span>
+            </div>
+            <div class="filter__option">
+              <input type="checkbox" name="month" id="month">
+              <label for="month">This Month</label>
+              <span class="checkbox__span">200+</span>
+            </div>
+            <div class="filter__option">
+              <input type="checkbox" name="all-time" id="all-time">
+              <label for="all-time">All</label>
+              <span class="checkbox__span">200+</span>
+            </div>
+          </div>
 
-              <!-- sort by level -->
-              <div class="filter__item">
-                <div class="title">
-                  <h4>Experience <i class='bx bx-briefcase-alt-2'></i></h4>
-                  <a href="#">Clear</a>
-                </div>
-                  
-                  <div class="filter__checkbox">
-                    <div>
-                      <input type="checkbox" name="intern">
-                      <label for="intern">Internship</label>
-                    </div>
-                    <p>25+</p>
-                  </div>
-                  <div class="filter__checkbox">
-                    <div>
-                      <input type="checkbox" name="junior">
-                      <label for="junior">Junior</label>
-                    </div>
-                    <p>100+</p>
-                  </div>
-                  <div class="filter__checkbox">
-                    <div>
-                      <input type="checkbox" name="middle">
-                      <label for="middle">Mid Level</label>
-                    </div>
-                    <p>200+</p>
-                  </div>
-                  <div class="filter__checkbox">
-                    <div>
-                      <input type="checkbox" name="senior">
-                      <label for="senior">Senior</label>
-                    </div>
-                    <p>100+</p>
-                  </div>
-                </div>
+          <!-- job exp requirements -->
+          <div class="filter">
+            <div class="filter__item__header">
+              <h3>Experience</h3>
+              <a href="#">Clear</a>
             </div>
+            <div class="filter__options">
+              <input type="checkbox" name="intern" id="intern">
+              <label for="intern">Intern</label>
+              <span class="checkbox__span">50+</span>
+            </div>
+            <div class="filter__options">
+              <input type="checkbox" name="junior" id="junior">
+              <label for="junior">Junior</label>
+              <span class="checkbox__span">100+</span>
+            </div>
+            <div class="filter__options">
+              <input type="checkbox" name="middle" id="middle">
+              <label for="middle">Mid-level</label>
+              <span class="checkbox__span">200+</span>
+            </div>
+            <div class="filter__options">
+              <input type="checkbox" name="senior" id="senior">
+              <label for="senior">Senior</label>
+              <span class="checkbox__span">100+</span>
+            </div>
+          </div>
+
+          <!-- job working hrs -->
+          <div class="filter">
+            <div class="filter__item__header">
+              <h3>Working Hrs</h3>
+              <a href="#">Clear</a>
+            </div>
+            <div class="filter__options">
+              <input type="checkbox" name="contract" id="contract">
+              <label for="contract">Contract</label>
+              <span class="checkbox__span">50+</span>
+            </div>
+            <div class="filter__options">
+              <input type="checkbox" name="part-time" id="part-time">
+              <label for="part-time">Part Time</label>
+              <span class="checkbox__span">50+</span>
+            </div>
+            <div class="filter__options">
+              <input type="checkbox" name="full-time" id="full-time">
+              <label for="full-time">Full Time</label>
+              <span class="checkbox__span">50+</span>
+            </div>
+          </div>
+
+          <!-- job location -->
+           <div class="filter">
+            <div class="filter__item__header">
+              <h3>Location</h3>
+              <a href="#">Clear</a>
+            </div>
+            <div class="filter__options">
+              <input type="checkbox" name="remote" id="remote">
+              <label for="remote">Remote</label>
+              <span class="checkbox__span">100+</span>
+            </div>
+            <div class="filter__options">
+              <input type="checkbox" name="semi-remote" id="semi-remote">
+              <label for="semi-remote">Semi-Remote</label>
+              <span class="checkbox__span">150+</span>
+            </div>
+            <div class="filter__options">
+              <input type="checkbox" name="on-site" id="on-site">
+              <label for="on-site">On-Site</label>
+              <span class="checkbox__span">150+</span>
+            </div>
+          </div>
+
+        </div>
         
-              <!-- sort by hours -->
-              <div class="filter__item">
-                <div class="title">
-                  <h4>Hours <i class='bx bx-time-five'></i></h4>
-                  <a href="#">Clear</a>
-                </div>
-                <div class="filter__checkbox">
-                  <div>
-                    <input type="checkbox" name="part">
-                    <label for="part">Part Time</label>
-                  </div>
-                  <p>90+</p>
-                </div>
-                <div class="filter__checkbox">
-                  <div>
-                    <input type="checkbox" name="full">
-                    <label for="full">Full Time</label>
-                  </div>
-                  <p>400+</p>
-                </div>
-              </div>
         
-              <!-- sort by work location
-                -->
-              <div class="filter__item">
-                <div class="title">
-                  <h4>Location <i class='bx bx-buildings'></i></h4>
-                  <a href="#">Clear</a>
-                </div>
-                <div class="filter__checkbox">
-                  <div>
-                    <input type="checkbox" name="remote">
-                    <label for="remote">Remote</label>
-                  </div>
-                  <p>90+</p>
-                </div>
-                <div class="filter__checkbox">
-                  <div>
-                    <input type="checkbox" name="semi-remote">
-                    <label for="semi-remote">Semi-Remote</label>
-                  </div>
-                  <p>90+</p>
-                </div>
-                <div class="filter__checkbox">
-                  <div>
-                    <input type="checkbox" name="in-office">
-                    <label for="in-office">In Office</label>
-                  </div>
-                  <p>90+</p>
-                </div>
-                
-                <!-- sort by pay -->
-                 <div class="filter__item">
-                <div class="title">
-                  <h4>Pay <i class='bx bx-line-chart'></i></h4>
-                  <a href="#">Clear</a>
-                </div>
-                <div class="filter__checkbox">
-                  <div>
-                    <input type="checkbox" name="0-25k">
-                    <label for="0-25k">$0-$25,000/yr</label>
-                  </div>
-                </div>
-                <div class="filter__checkbox">
-                  <div>
-                    <input type="checkbox" name="25-50k">
-                    <label for="25-50k">$25,000-$50,000/yr</label>
-                  </div>
-                </div>
-                <div class="filter__checkbox">
-                  <div>
-                    <input type="checkbox" name="50-90k">
-                    <label for="50-90k">$50,000-$90,000/yr</label>
-                  </div>
-                </div>
-                <div class="filter__checkbox">
-                  <div>
-                    <input type="checkbox" name="90k+">
-                    <label for="90k+">$90k+/yr</label>
-                  </div>
-                </div>
-            </div>
-      
-      
-            </div>
+        
       </div>
     </div>
     
