@@ -1,21 +1,3 @@
-:root {
-  /* dark theme properties */
-  --darktheme-light-grey: #eee;
-  --darktheme-grey: #999;
-  --darktheme-dark-grey: #333;
-  --darktheme-black-border: #111;
-  --darktheme-black-text: #111;
-  --darktheme-accent: #008cff;
-
-  /* light theme properties */
-  --lighttheme-light-grey: #eee;
-  --lighttheme-grey: #ccc;
-  --lighttheme-dark-grey: #999;
-  --lighttheme-black-border: #999;
-  --lighttheme-black-text: #111;
-  --lighttheme-accent: #008cff;
-}
-
 *,
 *::after,
 *::before {
@@ -25,37 +7,111 @@
   outline: none;
 }
 
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg-100: #eee; /* light */
+    --bg-400: #ccc; /* mid */
+    --bg-700: #999; /* dark */
+    --border: #999;
+    --text-100: #ccc;
+    --text-400: #999;
+    --text-700: #111;
+    --accent-blue: #008cff;
+    --accent-green: #0f9d58;
+    --theme-toggle: #faffb2;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-100: #777;
+    --bg-400: #555; /* mid */
+    --bg-700: #111; /* dark */
+    --border: #999;
+    --text-100: #d3d3d3;
+    --text-400: #b4b4b4;
+    --text-700: #d4d4d4;
+    --accent-blue: #008cff;
+    --accent-green: #0f9d58;
+    --theme-toggle: #faffb2;
+  }
+}
+
+[color-scheme="light"] {
+  --bg-100: #eee; /* light */
+  --bg-400: #ccc; /* mid */
+  --bg-700: #999; /* dark */
+  --border: #999;
+  --text-100: #ccc;
+  --text-400: #999;
+  --text-700: #111;
+  --accent-blue: #008cff;
+  --accent-green: #0f9d58;
+  --theme-toggle: #faffb2;
+}
+
+[color-scheme="dark"] {
+  --bg-100: #777;
+  --bg-400: #555; /* mid */
+  --bg-700: #111; /* dark */
+  --border: #999;
+  --text-100: #d3d3d3;
+  --text-400: #b4b4b4;
+  --text-700: #d4d4d4;
+  --accent-blue: #008cff;
+  --accent-green: #0f9d58;
+  --theme-toggle: #faffb2;
+}
+
 body {
   font-family: "Inter", sans-serif;
   font-size: 14px;
   display: flex;
   height: 100vh;
-  background-color: var(--darktheme-darktheme-light-grey);
+  background-color: var(--bg-100);
 }
 
 a {
   text-decoration: none;
-  color: var(--darktheme-black-text);
+  color: var(--text-700);
 }
 
 p {
-  color: var(--darktheme-grey);
+  color: var(--text-400);
 }
 
 input {
   font-family: "Inter", sans-serif;
 }
 
+#theme {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
 .sidebar {
   flex: 1;
-  background: var(--darktheme-dark-grey);
+  background: var(--bg-400);
   padding: 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 
+  & .sidebar__head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    & .bx {
+      font-size: 24px;
+      color: var(--theme-toggle);
+      cursor: pointer;
+    }
+  }
+
   & a {
-    color: var(--darktheme-light-grey);
+    color: var(--text-700);
     font-weight: 500;
   }
 
@@ -75,22 +131,22 @@ input {
       font-weight: bold;
 
       & a {
-        color: var(--darktheme-grey);
+        color: var(--text-400);
         transition: all 0.3s ease-in-out;
       }
 
       & i {
-        color: var(--darktheme-grey);
+        color: var(--text-400);
         transition: all 0.3s ease-in-out;
       }
     }
 
     & .active {
-      background-color: var(--darktheme-light-grey);
+      background-color: var(--bg-100);
 
       & a,
       i {
-        color: var(--darktheme-black-text);
+        color: var(--text-700);
         font-weight: bold;
       }
     }
@@ -119,9 +175,9 @@ input {
       padding: 8px 12px;
       border: 2px solid rgba(0, 0, 0, 0);
       border-radius: 24px;
-      color: var(--darktheme-dark-grey);
+      color: var(--text-7);
       z-index: 1;
-      background: var(--darktheme-light-grey);
+      background: var(--bg-100);
       position: relative;
       font-size: 14px;
       font-weight: bold;
@@ -139,13 +195,13 @@ input {
       height: 100%;
       width: 0;
       border-radius: 24px;
-      background-color: var(--darktheme-dark-grey);
+      background-color: var(--bg-dark);
       z-index: -1;
       transition: all 250ms;
     }
 
     .profile__view__button:hover {
-      color: var(--darktheme-light-grey);
+      color: var(--text-100);
     }
 
     .profile__view__button:hover::before {
@@ -184,11 +240,11 @@ input {
       gap: 4px;
       cursor: pointer;
       padding: 8px 12px;
-      border: 2px solid var(--darktheme-grey);
+      border: 2px solid var(--border);
       border-radius: 24px;
-      color: var(--darktheme-black-text);
+      color: var(--text-700);
       z-index: 1;
-      background: var(--darktheme-light-grey);
+      background: var(--bg-100);
       position: relative;
       font-size: 14px;
       font-weight: bold;
@@ -211,14 +267,15 @@ input {
       height: 100%;
       width: 0;
       border-radius: 24px;
-      background-color: var(--darktheme-dark-grey);
+      background-color: var(--bg-dark);
       z-index: -1;
       transition: all 250ms;
     }
 
     & .search__button:hover {
-      color: var(--darktheme-light-grey);
-      border: 2px solid white;
+      color: var(--text-100);
+      border: 2px solid var(--text-700);
+      /* issue here with color visibility */
     }
 
     & .search__button:hover::before {
@@ -243,7 +300,7 @@ input {
     }
 
     & #menuToggle:hover {
-      border: 2px solid var(--darktheme-grey);
+      border: 2px solid var(--border);
       border-radius: 24px;
     }
   }
@@ -253,14 +310,14 @@ input {
     display: flex;
     align-items: center;
     border-radius: 24px;
-    color: var(--darktheme-black-text);
+    color: var(--text-700);
     width: 100%;
 
     & i {
       padding: 8px 12px 8px 14px;
-      background-color: var(--darktheme-grey);
+      background-color: var(--bg-400);
       border-radius: 24px 0 0 24px;
-      color: var(--darktheme-light-grey);
+      color: var(--text-700);
       font-size: 1.25rem;
     }
 
@@ -269,7 +326,7 @@ input {
       width: 100%;
       padding: 12px 12px;
       border-radius: 0 24px 24px 0;
-      background-color: var(--darktheme-light-grey);
+      background-color: var(--bg-100);
     }
   }
 
@@ -305,7 +362,7 @@ input {
   }
 
   & .bx-bell:hover {
-    border: 2px solid var(--darktheme-grey);
+    border: 2px solid var(--border);
   }
 
   & .main {
@@ -324,13 +381,13 @@ input {
         text-align: center;
 
         & p {
-          color: var(--darktheme-dark-grey);
+          color: var(--text-400);
           font-size: 18px;
         }
 
         & span {
           font-size: 14px;
-          color: var(--darktheme-grey);
+          color: var(--text-400);
         }
       }
     }
@@ -374,16 +431,16 @@ input {
             }
 
             .job__location {
-              color: var(--darktheme-dark-grey);
+              color: var(--text-400);
               font-size: 14px;
             }
 
             span {
-              color: var(--darktheme-grey);
+              color: var(--text-400);
             }
 
             p {
-              color: var(--darktheme-dark-grey);
+              color: var(--text-700);
             }
           }
         }
@@ -396,7 +453,7 @@ input {
 
         & button {
           padding: 4px 8px;
-          border: 2px solid var(--darktheme-grey);
+          border: 2px solid var(--border);
           border-radius: 24px;
           width: 84px;
         }
@@ -459,11 +516,11 @@ input {
       }
 
       & .option__checkbox {
-        color: var(--darktheme-grey);
+        color: var(--text-400);
       }
 
       & input[type="checkbox"]:checked + label {
-        color: var(--darktheme-black-text);
+        color: var(--text-700);
         font-weight: bold;
       }
 
@@ -475,7 +532,7 @@ input {
       }
 
       & .checkbox__span {
-        color: var(--darktheme-grey);
+        color: var(--text-400);
       }
     }
   }
