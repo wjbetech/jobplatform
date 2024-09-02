@@ -542,6 +542,10 @@ input {
   .container .bx-bell {
     display: none;
   }
+
+  .container .main .job__cards {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media screen and (max-width: 550px) {
